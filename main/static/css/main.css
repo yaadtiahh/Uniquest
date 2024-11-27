@@ -140,7 +140,7 @@ nav a {
     box-sizing: border-box;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для четкости */
-    
+    border-bottom: 1px solid #555;
 }
 
 .main-content .content {
@@ -197,6 +197,7 @@ nav a {
     box-sizing: border-box;
     padding-left: 100px;
     padding-top: 112px;
+    border-bottom: 1px solid #555;
 }
 
 .innovative-content {
@@ -306,6 +307,7 @@ nav a {
     box-sizing: border-box;
     padding-left: 100px;
     padding-top: 112px;
+    border-bottom: 1px solid #555;
 }
 
 .features-news .features-text {
@@ -388,6 +390,7 @@ nav a {
     box-sizing: border-box;
     padding-left: 100px;
     padding-top: 112px;
+    border-bottom: 1px solid #555;
 }
 
 .your-potential-content {
@@ -482,7 +485,6 @@ nav a {
     border: 1px solid #007bff00;
 }
 
-
 .your-potential .block-features {
     width: 616px;
     height: 172px;
@@ -498,14 +500,17 @@ nav a {
     height: 48px;
     border: 1px solid rgba(245, 245, 220, 0);
 }
+/* YOUR-POTENTIAL END */
 
 
+/* <-- FOOTER START --> */
 footer {
     width: 100%;
     height: 570px;
     background-color: #fff;
     box-sizing: border-box; /* Учитываем отступы и границы в размерах элемента */
     bottom: 0;
+    padding-top: 80px;
 }
 
 .footer {
@@ -606,3 +611,123 @@ footer {
     color: #007AFF;
     padding-left: 24px;
 }
+
+/* <-- FOOTER END --> */
+
+/* <-- UNIQUEST TRANSFORMS START--> */
+.uniquest-transforms {
+    background-color: #fff;
+    width: 100%;
+    height: 942px;
+    box-sizing: border-box;
+    padding-left: 64px;
+    padding-top: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid #555;
+}
+
+/* main-text start */
+.uniquest-transforms .main-text {
+    width: 768px;
+    height: 234px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.uniquest-transforms strong {
+    color: #007AFF;
+    font-size: 16px;
+}
+
+.uniquest-transforms h1 {
+    color: #007AFF;
+    font-size: 48px;
+    padding-bottom: 24px;
+    text-align: center;
+    margin: 0;
+    padding-top: 16px;
+}
+
+.uniquest-transforms p {
+    color: #007AFF;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+/* main-text end */
+
+
+/* main-boxes start */
+.uniquest-transforms .main-boxes {
+    width: 1312px;
+    height: 276px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.uniquest-transforms .box {
+    width: 405px;
+    height: 204px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.uniquest-transforms .box h3{
+    color: #007AFF;
+    font-size: 32px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.uniquest-transforms .box img{
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(245, 245, 220, 0);
+}
+/* main-boxes end */
+
+
+
+/* main-btns start*/
+.uniquest-transforms .main-btns .btn-learn-more {
+    width: 129px;
+    height: 48px;
+    color: #007AFF;
+    background-color: #007bff00;
+    border: 1px solid #007AFF;
+    cursor: pointer;
+}
+
+.uniquest-transforms .main-btns{
+    padding-top: 32px;
+}
+
+.uniquest-transforms a{
+    width: 129px;
+    height: 48px;
+    font-size: 14px;
+    background-color: #007bff00;
+    border: 1px solid #007bff00;
+    text-decoration: none;
+    cursor: pointer;
+    color: #007AFF;
+    padding-left: 32px;
+}
+.uniquest-transforms a img {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #007bff00;
+}
+/* main-btns end*/
