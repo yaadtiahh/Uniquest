@@ -1,0 +1,608 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #007AFF;
+    background: url(/static/imgs/bg.jpg) no-repeat fixed;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Шрифт */
+}
+
+/* Хедер */
+.header {
+    display: flex;
+    flex-direction: row; /* Устанавливаем направление флекса (по умолчанию) */
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    height: 72px;
+    padding: 0px 100px;
+    margin: 0;
+    background-color: white;
+    color: #007AFF;
+    font-size: 16px;
+    box-sizing: border-box; /* Учитываем отступы и границы в размерах элемента */
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* На переднем плане */
+}
+
+.header .logo img {
+    max-height: 55px; /* Размер логотипа */
+}
+
+/* Контейнер для правых элементов */
+
+.header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    list-style-type: none; /* Убираем маркеры списка */    
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем внешние отступы */
+    
+}
+
+nav a {
+    text-decoration: none;
+}
+.nav li {
+    display: inline; /* Элементы располагаются в одну строку */
+    margin-right: 32px;
+}
+
+/* Переключение языка */
+.more-info {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-weight: 500;
+    position: relative; /* Для корректного позиционирования меню */
+    cursor: pointer;
+    margin: 16px;
+}
+
+.more-info .icon,
+.more-info .arrow-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.info-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Меню всегда под переключателем */
+    right: 0;
+    background: #222;
+    border-radius: 5px;
+    list-style: none;
+    z-index: 1000;
+    width: 175px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    overflow: hidden; 
+}
+
+/* Стили для элементов списка */
+.info-menu li {
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+.info-menu li:hover {
+    background: #FFCE00;
+    color: black;
+}
+
+/* Hover эффект */
+.more-info.active .info-menu {
+    display: block;
+}
+
+.more-info.active .arrow-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.header .btn-sign-in{
+    width: 71px;
+    height: 40px;
+    background-color: #007bff00;
+    color: #007AFF;
+    border: 2px solid #007AFF;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.header .btn-sign-up{
+    width: 71px;
+    height: 40px;
+    background-color: #007AFF;
+    color: white;
+    border: 2px solid #007AFF;
+    cursor: pointer;
+}
+
+/* Главный контент */
+.main-content {
+    width: 100%;
+    height: 600px;
+    padding-left: 100px;
+    margin-top: 220px;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для четкости */
+    
+}
+
+.main-content .content {
+    width: 560px;
+    height: 413px;
+}
+
+.main-text p{
+    font-size: 56px;
+    margin-bottom: 32px;
+}
+
+.main-description p {
+    font-size: 18px;
+    margin: 0;
+    line-height: 150%;
+}
+
+.main-description {
+    margin-bottom: 32px;
+}
+
+.main-btns {
+    margin-top: 32px;
+}
+
+
+.content .btn-get-started{
+    width: 129px;
+    height: 48px;
+    background-color: #ffffff;
+    color: #007AFF;
+    border: 2px solid #ffffff;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.content .btn-learn-more{
+    width: 129px;
+    height: 48px;
+    background-color: #007AFF;
+    color: white;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+}
+
+
+/* INNOVATIVE */
+
+.innovative {
+    background-color: #fff;
+    width: 100%;
+    height: 864px;
+    box-sizing: border-box;
+    padding-left: 100px;
+    padding-top: 112px;
+}
+
+.innovative-content {
+    display: flex;
+    flex-direction: row; /* Устанавливаем направление флекса (по умолчанию) */
+    width: 1312px;
+    height: 640px;
+    gap: 80px;
+}
+
+.innovative-text {
+    width: 616px;
+    height: 505px;
+    padding-top: 67.5px;
+    padding-bottom: 67.5px;
+}
+
+.innovative-content img {
+    width: 616px;
+    height: 640px;
+    border: 1px solid black;
+}
+
+.innovative .main-text{
+    width: 616px;
+    height: 261px;
+}
+
+.innovative .main-text p{
+    font-size: 18px;
+    color: #007AFF;
+    margin-bottom: 32px;
+}
+
+.innovative .main-text h2{
+    font-size: 48px;
+    color: #007AFF;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+/* INNOVATIVE FEATURES */
+
+.innovative .features {
+    display: flex;
+    justify-content: space-between; /* Разделение блоков по ширине */
+    width: 616px;
+    height: 132px;
+    padding-top: 32px;
+  }
+
+.innovative .feature h3 {
+    color: #007AFF; /* Синий цвет заголовков */
+    font-size: 18px;
+    margin-bottom: 10px;
+    width: 296px;
+    height: 28px;
+}
+
+.innovative .feature p {
+    color: #555; /* Серый цвет текста */
+    font-size: 14px;
+    line-height: 1.6;
+    width: 296px;
+    height: 72px;
+}
+
+.innovative .feature {
+    width: 296px;
+    height: 156px;
+}
+
+/* INNOVATIVE BTNS */
+.innovative .btns .btn-learn-more {
+    width: 129px;
+    height: 48px;
+    color: #007AFF;
+    background-color: #007bff00;
+    border: 1px solid #007AFF;
+    cursor: pointer;
+}
+
+.innovative a{
+    width: 129px;
+    height: 48px;
+    font-size: 14px;
+    background-color: #007bff00;
+    border: 1px solid #007bff00;
+    text-decoration: none;
+    cursor: pointer;
+    color: #007AFF;
+    padding-left: 32px;
+}
+.innovative a img {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #007bff00;
+}
+
+
+/* FEATURES */
+
+.features-news {
+    width: 100%;
+    height: 884px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-left: 100px;
+    padding-top: 112px;
+}
+
+.features-news .features-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1312px;
+    height: 144px;
+}
+
+.features-news .main-text h2{
+    font-size: 40px;
+    width: 616px;
+    height: 144px;
+    margin: 0;
+    color: #007AFF;
+}
+
+.features-news .secondary-text p{
+    width: 616px;
+    height: 135px;
+    font-size: 18px;
+    margin: 0;
+    color: #007AFF;
+}
+
+.exploring {
+    display: flex;
+    flex-direction: row;
+    width: 1312px;
+    height: 436px;
+    color: #007AFF;
+    gap: 48px;
+    margin-top: 80px;
+}
+
+.exploring .post {
+    width: 405px;
+    height: 436px;
+
+}
+
+.exploring .post img{
+    width: 405px;
+    height: 240px;
+}
+
+.exploring .post h3{
+    font-size: 24px;
+    margin: 0;
+    padding-top: 32px;
+}
+
+.exploring .post p{
+    font-size: 16px;
+    margin: 0;
+    padding-top: 16px;
+    padding-bottom: 32px;
+}
+
+.exploring .post a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #007AFF;
+    padding-top: 32px;
+}
+.exploring .post a img {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+/* YOUR-POTENTIAL START */
+
+.your-potential {
+    background-color: #fff;
+    width: 100%;
+    height: 864px;
+    box-sizing: border-box;
+    padding-left: 100px;
+    padding-top: 112px;
+}
+
+.your-potential-content {
+    display: flex;
+    flex-direction: row; /* Устанавливаем направление флекса (по умолчанию) */
+    width: 1312px;
+    height: 640px;
+    gap: 80px;
+}
+
+.your-potential-text {
+    width: 616px;
+    height: 505px;
+    padding-top: 67.5px;
+    padding-bottom: 67.5px;
+}
+
+.your-potential-content img {
+    width: 616px;
+    height: 640px;
+    border: 1px solid black;
+}
+
+.your-potential .main-text{
+    width: 616px;
+    height: 261px;
+}
+
+.your-potential .main-text p{
+    font-size: 18px;
+    color: #007AFF;
+    margin-bottom: 32px;
+}
+
+.your-potential .main-text h2{
+    font-size: 48px;
+    color: #007AFF;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+/* your-potential FEATURES */
+
+.your-potential .features {
+    display: flex;
+    justify-content: space-between; /* Разделение блоков по ширине */
+    width: 616px;
+    height: 132px;
+    padding-top: 32px;
+  }
+
+.your-potential .feature h3 {
+    color: #007AFF; /* Синий цвет заголовков */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.your-potential .feature p {
+    color: #555; /* Серый цвет текста */
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* your-potential BTNS */
+.your-potential .btns .btn-learn-more {
+    width: 129px;
+    height: 48px;
+    color: #007AFF;
+    background-color: #007bff00;
+    border: 1px solid #007AFF;
+    cursor: pointer;
+}
+
+.your-potential .btns{
+    padding-top: 32px;
+}
+
+.your-potential a{
+    width: 129px;
+    height: 48px;
+    font-size: 14px;
+    background-color: #007bff00;
+    border: 1px solid #007bff00;
+    text-decoration: none;
+    cursor: pointer;
+    color: #007AFF;
+    padding-left: 32px;
+}
+.your-potential a img {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #007bff00;
+}
+
+
+.your-potential .block-features {
+    width: 616px;
+    height: 172px;
+}
+
+.your-potential .feature {
+    width: 296px;
+    height: 156px;
+}
+
+.your-potential .feature img{
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(245, 245, 220, 0);
+}
+
+
+footer {
+    width: 100%;
+    height: 570px;
+    background-color: #fff;
+    box-sizing: border-box; /* Учитываем отступы и границы в размерах элемента */
+    bottom: 0;
+}
+
+.footer {
+    display: flex; /* Используем Flexbox для расположения элементов в строку */
+    justify-content: space-between;
+    margin: 0px 100px;
+    width: 1312px;
+    height: 357px;
+    border: 1px solid #007AFF;
+}
+
+.footer .logo img {
+    max-height: 36px; /* Размер логотипа */
+    margin-bottom: 32px;
+}
+
+.footer .main-text {
+    width: 864px;
+    height: 261px;
+    padding-bottom: 32px;
+    padding-left: 48px;
+    padding-top: 48px;
+}
+
+.footer .about {
+    width: 864px;
+    height: 137px;
+    color: #007AFF;
+    text-decoration: none;
+    margin-bottom: 32px;
+}
+
+.footer .icons {
+    width: 168px;
+    height: 24px;
+}
+
+.footer .about h3{
+    font-size: 14px;
+    margin: 0;
+    padding-bottom: 4px;
+}
+
+.footer .about p{
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer .address {
+    margin-bottom: 32px;
+}
+
+.footer .icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer .links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 65px;
+    gap: 16px;
+    width: 288px;
+    height: 185px;
+}
+
+.footer .links .column-one{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 288px;
+    height: 185px;
+}
+
+.footer .links .column-two{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 288px;
+    height: 185px;
+}
+
+.privacy-policy {
+    display: flex;
+    justify-content: space-between;
+    width: 1312px;
+    height: 21px;
+    color: #007AFF;
+    margin-left: 100px;
+    margin-top: 32px;
+}
+
+.privacy-policy p{
+    margin: 0;
+}
+
+.privacy-policy .right-side a{
+    color: #007AFF;
+    padding-left: 24px;
+}
