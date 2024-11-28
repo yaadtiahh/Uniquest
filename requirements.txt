@@ -4,6 +4,7 @@ click==8.1.7
 dj-database-url==0.5.0
 Django==3.2.10
 django-ckeditor==6.7.1
+django-heroku==0.3.1
 django-js-asset==2.2.0
 django-phonenumber-field==8.0.0
 environs==5.2.1
@@ -16,6 +17,7 @@ marshmallow==3.23.1
 packaging==24.2
 phonenumberslite==8.13.50
 pillow==11.0.0
+psycopg2==2.9.10
 psycopg2-binary==2.9.10
 python-dotenv==1.0.1
 pytz==2024.2
