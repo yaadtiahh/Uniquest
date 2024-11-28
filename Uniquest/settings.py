@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-#!#ypni33^*@fq^+#xku2oot4*8z3q8a0ol-e(0@4g9*!rnb)(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['uniquestwebsite.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['uniquestweb.com', 'www.uniquestweb.com']
 
 
 # Application definition
