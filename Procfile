@@ -1,1 +1,1 @@
-worker: python3 manage.py runserver
+web: gunicorn UniQuest.wsgi --log-file -
