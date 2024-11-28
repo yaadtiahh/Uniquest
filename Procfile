@@ -1,1 +1,1 @@
-web: gunicorn UniQuest.wsgi --log-file -
+web: gunicorn Uniquest.wsgi:application
