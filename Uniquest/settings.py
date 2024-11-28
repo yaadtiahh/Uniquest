@@ -13,6 +13,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
+import environ
+
+# Инициализация
+env = environ.Env()
+environ.Env.read_env()
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -81,10 +87,7 @@ WSGI_APPLICATION = 'Uniquest.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',  # Путь к файлу базы данных
-    }
+    'default': env.db(),  # Django автоматически будет использовать DATABASE_URL из переменных окружения
 }
 
 
