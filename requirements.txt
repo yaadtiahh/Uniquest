@@ -24,4 +24,4 @@ SQLAlchemy==2.0.36
 sqlparse==0.5.2
 typing_extensions==4.12.2
 Werkzeug==2.2.2  # Изменено на версию 2.x для Python 3.9
-whitenoise==6.8.2
+whitenoise==6.8.2django-environ
