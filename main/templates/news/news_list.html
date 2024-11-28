@@ -1,48 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список новостей</title>
-</head>
-<body>
+{% extends 'template.html' %}
+
+{% load static %}
+
+{% block title %}
+  The Quest
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/news_list.css' %}">
+{% endblock %}
+
+
+{% block body %}
     <h1>Новости</h1>
-
-    <!-- Список новостей -->
-    {% if news %}
-        <ul>
-            {% for item in news %}
-                <li>
-                    <a href="{{ item.get_absolute_url }}">
-                        <h2>{{ item.title }}</h2>
-                    </a>
-                    {% if item.image %}
-                        <img src="{{ item.image.url }}" alt="{{ item.title }}" style="max-width: 200px; height: auto;">
-                    {% endif %}
-                    <p>{{ item.content|truncatechars:200 }}</p> <!-- Укороченный текст -->
-                    <p><small>Опубликовано: {{ item.created_at }}</small></p>
-                </li>
-            {% endfor %}
-        </ul>
-
-        <!-- Постраничная навигация -->
-        <div>
-            {% if is_paginated %}
-                <div>
-                    {% if page_obj.has_previous %}
-                        <a href="?page={{ page_obj.previous_page_number }}">Назад</a>
-                    {% endif %}
-
-                    <span>Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</span>
-
-                    {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}">Вперёд</a>
-                    {% endif %}
-                </div>
-            {% endif %}
+    <div class="news-list" >
+        {% for news in news %}
+        <div class="news-item">
+            <img src="{{ news.background_image.url }}" alt="">
+                <div class="main-text">
+                <h2><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></h2>
+                {{ news.content|truncatewords:30 }}
+                <p><small>Дата: {{ news.created_at|date:"d M Y" }}</small></p>
+            </div>
         </div>
-    {% else %}
-        <p>Новостей пока нет.</p>
-    {% endif %}
-</body>
-</html>
+        {% empty %}
+            <p>Пока нет новостей.</p>
+        {% endfor %}
+    </div>
+    
+{% endblock %}

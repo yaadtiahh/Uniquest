@@ -1,0 +1,5 @@
+django-ckeditor==6.7.1
+Django==3.2.10
+pillow==11.0.0
+SQLAlchemy==2.0.36
+Jinja2==3.1.4
