@@ -278,6 +278,12 @@ nav a {
     background-color: #007bff00;
     border: 1px solid #007AFF;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.innovative .btns .btn-learn-more:hover {
+    background-color: #007AFF;
+    color: #fff;
 }
 
 .innovative a{
@@ -462,6 +468,12 @@ nav a {
     background-color: #007bff00;
     border: 1px solid #007AFF;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.your-potential .btns .btn-learn-more:hover {
+    background-color: #007AFF;
+    color: #fff;
 }
 
 .your-potential .btns{
@@ -708,6 +720,12 @@ footer {
     background-color: #007bff00;
     border: 1px solid #007AFF;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.uniquest-transforms .main-btns .btn-learn-more:hover {
+    background-color: #007AFF;
+    color: #fff;
 }
 
 .uniquest-transforms .main-btns{
@@ -731,3 +749,122 @@ footer {
     border: 1px solid #007bff00;
 }
 /* main-btns end*/
+
+/* <-- REVIEW START --> */
+
+.review {
+    width: 100%;
+    height: 864px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding-top: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #555;
+}
+
+.review-content {
+    width: 1312px;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teacher img {
+    width: 512px;
+    height: 512px;
+} 
+
+.stars img{
+    width: 116px;
+    height: 19px;
+}
+
+.review-content .main-text p{
+    color: #007AFF;
+    font-size: 24px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    width: 505px;
+    height: 61px;
+}
+
+.name .teacher-name{
+    border-right: 1px solid #007AFF;
+    width: 300px;
+    height: 48px;
+    font-size: 16px;
+}
+
+.name .teacher-name p{
+    color: #007AFF;
+    margin: 0;
+}
+
+.name .teacher-name h1{
+    color: #007AFF;
+    margin: 0;
+    font-size: 20px;
+}
+
+.university img{
+    padding-left: 20px;
+    height: 38px;
+    width: 210px;
+}
+/* <-- REVIEW END --> */
+
+
+/* <-- CONTACTS START --> */
+.contacts {
+    width: 100%;
+    height: 450px;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #555;
+}
+
+.contacts-content {
+    width: 1312px;
+    height: 226px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact {
+    width: 405.33px;
+    height: 226px;
+    flex-direction: column;
+    margin-right: 48pxghble;
+}
+
+.contact img{
+    width: 48px;
+    height: 48px;
+}
+
+.contact h1{
+    font-size: 32px;
+    color: #007AFF;
+}
+
+.contact p{
+    font-size: 16px;
+    color: #007AFF;
+}
+
+.contact a{
+    font-size: 16px;
+    color: #007AFF;
+    cursor: pointer;
+}
+
+/* <-- CONTACTS END --> */
